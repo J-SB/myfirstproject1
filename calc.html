@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>my first calc</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+
+</head>
+<body>
+<h1>calculator</h1>
+<br>
+<form id="myform" name="calc">
+	<input id="dis" name="display"><br>
+<input type=button value="%" Onclick="calc.display.value+='%'">
+<input type=button id="demo1" value="&#8730" Onclick="myfun1(eval(calc.display.value))">
+<input type=button id="demo2"  value="x^2" Onclick="myfun2(eval(calc.display.value))">
+<input type=button id="demo3"   value="1/x" Onclick="document.getElementById('dis').innerHTML=myfun3()">
+<input type=button value="&plusmn" Onclick="calc.display.value+='&plusmn'"><br>
+<input type=button value="1" Onclick="calc.display.value+='1'">
+
+
+<input type=button value="2" Onclick="calc.display.value+='2'">
+<input type=button value="3" Onclick="calc.display.value+='3'">
+<input type=button value="." Onclick="calc.display.value+='.'">
+
+
+<input type=button value="+" Onclick="calc.display.value+='+'"><br>
+
+<input type=button value="4" Onclick="calc.display.value+='4'">
+<input type=button value="5" Onclick="calc.display.value+='5'">
+<input type=button value="6" Onclick="calc.display.value+='6'">
+<input type=button value="-" Onclick="calc.display.value+='-'">
+<input type=button value="*" Onclick="calc.display.value+='*'"><br>
+<input type=button value="7" Onclick="calc.display.value+='7'">
+<input type=button value="8" Onclick="calc.display.value+='8'">
+<input type=button value="9" Onclick="calc.display.value+='9'">
+<input type=button value="&divide" Onclick="calc.display.value+='/'">
+
+<input type=button value="C" Onclick="calc.display.value=' '"><br>
+<input type=button value="0" Onclick="calc.display.value+='0'">
+
+<input type=button value="=" Onclick="calc.display.value=eval(calc.display.value)">
+<input type=button value="del" Onclick="calc.display.value-=calc.display.value">
+</form>
+
+
+<script type="text/javascript">
+function myfun1()
+{
+	var a= MATH.sqrt(eval(calc.display.value));
+document.getElementById("dis").innerHTML=a;
+}	
+
+function myfun2()
+{
+var b= MATH.pow(eval(calc.display.value),2);
+document.getElementById("dis").innerHTML=b;
+}
+
+function myfun3()
+{
+var c= MATH.pow(eval(calc.display.value),-1);
+document.getElementById("dis").innerHTML=c;
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
